@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import classes from './EventItem.module.css';
+
+const { item, content, summary, address, actions } = classes;
 
 const EventItem = ({ title, image, date, location, id }) => {
 
@@ -14,19 +17,19 @@ const EventItem = ({ title, image, date, location, id }) => {
     const exploreLink = `/events/${id}`;
 
     return (
-        <li>
+        <li className={item}>
             <img src={`/${image}`} alt={title} />
-            <section>
-                <div>
+            <section className={content}>
+                <div className={summary}>
                     <h2>{title}</h2>
-                    <div>
+                    <div className={date}>
                         <time>{humanReadableDate}</time>
                     </div>
-                    <div>
+                    <div className={address}>
                         <address>{formattedAddress}</address>
                     </div>
                 </div>
-                <div>
+                <div className={actions}>
                     <Link href={exploreLink}>Explore Event</Link>
                 </div>
             </section>
