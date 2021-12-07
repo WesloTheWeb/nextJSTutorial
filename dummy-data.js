@@ -1,3 +1,5 @@
+// Holds dummy data and also functions used to interact with the dummy data.
+
 const DUMMY_EVENTS = [
     {
         id: 'e1',
