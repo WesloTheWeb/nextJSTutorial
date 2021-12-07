@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import classes from './EventItem.module.css';
+import Button from '../Button/Button';
+import ArrowRightIcon from '../icons/arrow-right-icon';
 
-const { item, content, summary, address, actions } = classes;
+const { item, content, summary, address, actions, icon } = classes;
 
 const EventItem = ({ title, image, date, location, id }) => {
 
@@ -30,7 +31,10 @@ const EventItem = ({ title, image, date, location, id }) => {
                     </div>
                 </div>
                 <div className={actions}>
-                    <Link href={exploreLink}>Explore Event</Link>
+                    <Button link={exploreLink}>
+                        <span>Explore Event</span>
+                        <span className={icon}><ArrowRightIcon /></span>    
+                    </Button>
                 </div>
             </section>
         </li>
