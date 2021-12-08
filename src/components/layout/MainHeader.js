@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 import classes from './MainHeader.module.css';
 
-const { header, navigation } = classes;
+const { header, navigation, logo } = classes;
 
 const MainHeader = (props) => {
     return (
         <header className={header}>
-            <div>
+            <div className={logo}>
                 <Link href="/">NextEvents</Link>
             </div>
             <nav className={navigation}>
