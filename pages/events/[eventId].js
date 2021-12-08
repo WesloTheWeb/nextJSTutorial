@@ -3,23 +3,28 @@ import { getEventById } from '../../dummy-data';
 import EventSummary from '../../src/components/EventDetails/EventSummary';
 import EventLogistics from '../../src/components/EventDetails/EventLogistics';
 import EventContent from '../../src/components/EventDetails/EventContent';
+import ErrorAlert from '../../src/components/ErrorAlert/ErrorAlert';
 
 function EventDetailPage() {
     const router = useRouter();
-    
+
     const eventId = router.query.eventId;
     const evnt = getEventById(eventId);
 
     if (!evnt) {
-        return <p>No event found!</p>
-    }
+        return (
+            <ErrorAlert>
+                <p>No event found!</p>
+            </ErrorAlert>
+        )
+    };
 
     return (
         <>
-            <EventSummary title={evnt.title}  />
-            <EventLogistics 
-                date={evnt.date} 
-                address={evnt.location} 
+            <EventSummary title={evnt.title} />
+            <EventLogistics
+                date={evnt.date}
+                address={evnt.location}
                 image={evnt.image}
                 imageAlt={evnt.title}
             />
