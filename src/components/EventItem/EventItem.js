@@ -41,5 +41,4 @@ const EventItem = ({ title, image, date, location, id }) => {
     );
 };
 
-
 export default EventItem;

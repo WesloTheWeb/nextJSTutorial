@@ -50,5 +50,4 @@ const EventSearch = ({onSearch}) => {
     );
 };
 
-
 export default EventSearch;

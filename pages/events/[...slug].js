@@ -70,5 +70,4 @@ const FilteredEventsPage = (props) => {
     );
 };
 
-
 export default FilteredEventsPage;

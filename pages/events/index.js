@@ -4,13 +4,12 @@ import { getAllEvents } from '../../dummy-data';
 import EventsSearch from '../../src/components/EventsSearch/EventsSearch';
 import EventsLists from '../../src/components/EventsList/EventsList';
 
-const AllEventsPage = (props) => {
+const AllEventsPage = () => {
     const events = getAllEvents();
     const router = useRouter();
 
     function findEventsHandler(year, month) {
         const fullPath = `/events/${year}/${month}`;
-        
         router.push(fullPath);
     }
 

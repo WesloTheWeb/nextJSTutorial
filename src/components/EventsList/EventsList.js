@@ -21,5 +21,4 @@ const EventList = ({ items }) => {
     );
 };
 
-
 export default EventList;
